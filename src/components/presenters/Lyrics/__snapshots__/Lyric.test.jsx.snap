@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lyric component renders Lyric 1`] = `
+<Fragment>
+  <h2>
+    test
+  </h2>
+  <p>
+    lyrics
+  </p>
+</Fragment>
+`;
