@@ -3,10 +3,8 @@
 exports[`Lyric component renders Lyric 1`] = `
 <Fragment>
   <h2>
-    test
+    Please Please Me
   </h2>
-  <p>
-    lyrics
-  </p>
+  <p />
 </Fragment>
 `;
