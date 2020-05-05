@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import placeholder from '../assets/placeholder.png';
 
 export const useFetchLyrics = (artist, title) => {
   const [lyrics, setLyrics] = useState('');
@@ -31,9 +30,13 @@ export const useFetchSongs = (releaseId, artist) => {
   return songs;
 };
 
-export const useFetchReleases = (artistId, pageNum, artist) => {
+export const useFetchReleases = (artistId, artist) => {
   const [releases, setReleases] = useState([]);
+  const [pageNum, setPageNum] = useState(1);
+
   const offset = pageNum * 20;
+  const dec = () => setPageNum(prev => prev - 1);
+  const inc = () => setPageNum(prev => prev + 1);
 
   useEffect(() => {
     fetch(`http://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json&limit=20&offset=${offset}`)
@@ -51,5 +54,6 @@ export const useFetchReleases = (artistId, pageNum, artist) => {
         setReleases(mungedReleases);
       });
   }, [pageNum]);
-  return releases;
+  return { releases, pageNum, dec, inc };
 };
+

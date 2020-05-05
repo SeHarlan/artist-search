@@ -1,31 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { useFetchReleases } from '../../../services/hooks';
 import withList from '../../HOCs/WithList/WithList';
 import ReleaseItem from '../Release/ReleaseItem';
+import { useParams } from 'react-router-dom';
 
-const Artist = ({ match }) => {
-  const [pageNum, setPageNum] = useState(1);
+const Artist = () => {
+  const { artist, artistId } = useParams();
 
-  const { artist, artistId } = match.params;
-
-  const dec = () => setPageNum(prev => prev - 1);
-  const inc = () => setPageNum(prev => prev + 1);
-
-  const releasesData = useFetchReleases(artistId, pageNum, artist);
+  const { releases, pageNum, dec, inc } = useFetchReleases(artistId, artist);
   const Releases = withList(ReleaseItem);
   return (
     <>
       <h1>{artist}</h1>
       <button disabled={pageNum === 1} onClick={dec}>Previous Page</button>
-      <button disabled={releasesData.length < 20} onClick={inc}>Next Page</button>
-      <Releases list={releasesData} />
+      <button disabled={releases.length < 20} onClick={inc}>Next Page</button>
+      <Releases list={releases} />
     </>
   );
-};
-
-Artist.propTypes = {
-  match: PropTypes.object.isRequired
 };
 
 export default Artist;

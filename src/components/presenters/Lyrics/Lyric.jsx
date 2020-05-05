@@ -1,11 +1,9 @@
 import React from 'react'; 
-import PropTypes from 'prop-types';
 import { useFetchLyrics } from '../../../services/hooks';
+import { useParams } from 'react-router-dom';
 
-const Lyric = ({ match }) => {
-  if(!match) return <><p>no song</p></>;
-  const artist = match.params.artist;
-  const title = match.params.title;
+const Lyric = () => {
+  const { artist, title } = useParams();
 
   const body = useFetchLyrics(artist, title);
   
@@ -17,8 +15,5 @@ const Lyric = ({ match }) => {
   );
 };
 
-Lyric.propTypes = {
-  match: PropTypes.object.isRequired
-};
 
 export default Lyric;

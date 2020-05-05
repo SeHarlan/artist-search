@@ -2,16 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-
-const Song = ({ title, artist }) => {
-
-  return (
-    <Link to={`/lyrics/${artist}/${title}`}>
-      {title}
-    </Link>
-  );
-};
-
+const Song = ({ title, artist }) => (
+  <Link to={`/lyrics/${artist}/${title}`}>
+    {title}
+  </Link>
+);
 
 Song.propTypes = {
   title: PropTypes.string.isRequired,
