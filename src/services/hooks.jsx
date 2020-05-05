@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import placeholder from '../assets/placeholder.png';
 
 export const useFetchLyrics = (artist, title) => {
   const [lyrics, setLyrics] = useState('');
@@ -39,13 +40,14 @@ export const useFetchReleases = (artistId, pageNum, artist) => {
       .then(res => res.json())
       .then(res => res.releases)
       .then(releases => {
-        const mungedReleases = releases.map(release => ({
-          releaseTitle: release.title.replace('/', 'and'),
-          releaseId: release.id,
-          imageBool: release['cover-art-archive'].artwork,
-          artist: artist,
-          id: release.id
-        }));
+        const mungedReleases = releases.map(release => {        
+          return ({
+            releaseTitle: release.title.replace('/', 'and'),
+            releaseId: release.id,
+            artist: artist,
+            id: release.id
+          });
+        });
         setReleases(mungedReleases);
       });
   }, [pageNum]);

@@ -25,7 +25,6 @@ const withList = (ItemComponent) => {
 
 withList.propTypes = {
   ItemComponent: PropTypes.func.isRequired,
-  list: PropTypes.array.isRequired
 };
 
 

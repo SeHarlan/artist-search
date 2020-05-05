@@ -3,6 +3,18 @@
 exports[`Artist component renders Artist 1`] = `
 <Fragment>
   <h1 />
+  <button
+    disabled={true}
+    onClick={[Function]}
+  >
+    Previous Page
+  </button>
+  <button
+    disabled={true}
+    onClick={[Function]}
+  >
+    Next Page
+  </button>
   <WithList(ReleaseItem)
     list={Array []}
   />

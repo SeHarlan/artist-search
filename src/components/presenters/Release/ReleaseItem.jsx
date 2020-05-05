@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 
-const ReleaseItem = ({ releaseTitle, releaseId, imageBool, artist }) => {
+const ReleaseItem = ({ releaseTitle, releaseId, artist }) => {
 
-  const image = imageBool ? `http://coverartarchive.org/release/${releaseId}/front` : '/placeholder.png';
+  const img = `http://coverartarchive.org/release/${releaseId}/front`;
+  const handleImgError = ({ target }) => (target.src = '/placeholder.png');
+
   return (
-    <Link to={`/releases/${artist}/${releaseTitle}/${releaseId}/${imageBool}`} >
+    <Link to={`/releases/${artist}/${releaseTitle}/${releaseId}`} >
       <h2>{releaseTitle}</h2>
-      <img src={image} alt={releaseTitle} />
+      <img src={img} onError={handleImgError} alt={releaseTitle} />
     </Link>
   );
 };
@@ -18,7 +20,7 @@ const ReleaseItem = ({ releaseTitle, releaseId, imageBool, artist }) => {
 ReleaseItem.propTypes = { 
   releaseTitle: PropTypes.string.isRequired, 
   releaseId: PropTypes.string.isRequired, 
-  imageBool: PropTypes.bool.isRequired, 
+  image: PropTypes.string.isRequired,
   artist:PropTypes.string.isRequired
 };
 

@@ -11,12 +11,17 @@ exports[`App component renders App 1`] = `
     <Route
       component={[Function]}
       exact={true}
-      path="/releases/:artist/:releaseTitle/:releaseId/:imageBool"
+      path="/releases/:artist/:releaseTitle/:releaseId"
     />
     <Route
       component={[Function]}
       exact={true}
       path="/artists/:artist/:artistId"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/:artist?"
     />
   </Switch>
 </BrowserRouter>

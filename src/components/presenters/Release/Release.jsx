@@ -5,19 +5,18 @@ import withList from '../../HOCs/WithList/WithList';
 import Song from '../Songs/Song';
 
 const Release = ({ match }) => {
-  const { releaseTitle, releaseId, imageBool, artist } = match.params;
-  const title = releaseTitle;
-  const isThereImage = imageBool === 'true';
+  const { releaseTitle, releaseId, artist } = match.params;
 
-  const img = isThereImage ? `http://coverartarchive.org/release/${releaseId}/front` : '/placeholder.png';
+  const img = `http://coverartarchive.org/release/${releaseId}/front`;
+  const handleImgError = ({ target }) => (target.src = '/placeholder.png');
   
   const songsData = useFetchSongs(releaseId, artist);
   const Songs = withList(Song);
 
   return (
     <>
-      <h2>{title}</h2>
-      <img src={img} alt={title}/>
+      <h2>{releaseTitle}</h2>
+      <img src={img} onError={handleImgError} alt={releaseTitle}/>
       <Songs list={songsData}/>
     </>
   );
