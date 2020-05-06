@@ -9,14 +9,14 @@ Search for artists by name.
 
 ## Requirements
 
-* Create a search view to search for artists by name
+[x] Create a search view to search for artists by name
   * Search should display a list of matching artists
   * Use `http://musicbrainz.org/ws/2/artist?query=<SEARCH>&fmt=json&limit=25`
   * Allow paging through artists
   * BONUS: As you type into the input box update a `searchTerm`query string.
     Navigating directly to a URL with a `searchTerm` query string pre-fills
     the search form.
-[] Create an artist view which list all releases by an artist
+[x] Create an artist view which list all releases by an artist
   * Use `http://musicbrainz.org/ws/2/release?artist=<ARTIST_ID>&fmt=json`
   * Get cover art from `http://coverartarchive.org/release/<RELEASE_ID>/front`
   * Only some releases have cover art. Display a placeholder if no cover art.

@@ -1,0 +1,54 @@
+.Search {
+  h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2rem;
+  }
+  h2 {
+    text-align: center;
+  }
+  ul {
+    height: 70vh;
+    margin: 1rem 10vw;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: scroll;
+  }
+  li {
+    margin: 0 5rem 2rem 5rem;
+    border-bottom: 2px dotted wheat;
+  }
+  form {
+    width: 30vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+      font-family: inherit;
+      margin-right: 1rem;
+      border: 2px inset wheat;
+      border-radius: 0.2rem;
+      padding: 0.3rem;
+    }
+  }
+  nav {
+    width: 30vw;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  button {
+    height: 2rem;
+    padding: 0 1rem;
+    border: 2px outset wheat;
+    background-color: whitesmoke;
+    font-family: inherit;
+    border-radius: 0.6rem;
+    outline: none;
+    cursor: pointer;
+  }
+}

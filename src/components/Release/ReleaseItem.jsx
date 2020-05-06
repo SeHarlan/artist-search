@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import placeholder from '../../../assets/placeholder.png';
+import placeholder from '../../assets/placeholder.png';
 
 
 const ReleaseItem = ({ releaseTitle, releaseId, artist }) => {
@@ -21,7 +21,6 @@ const ReleaseItem = ({ releaseTitle, releaseId, artist }) => {
 ReleaseItem.propTypes = { 
   releaseTitle: PropTypes.string.isRequired, 
   releaseId: PropTypes.string.isRequired, 
-  image: PropTypes.string.isRequired,
   artist:PropTypes.string.isRequired
 };
 

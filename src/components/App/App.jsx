@@ -4,10 +4,10 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import Lyric from '../presenters/Lyrics/Lyric';
-import Release from '../presenters/Release/Release';
-import Artist from '../presenters/Artist/Artist';
-import Search from '../presenters/Search/Search';
+import Lyric from '../Lyrics/Lyric';
+import Release from '../Release/Release';
+import Artist from '../Artist/Artist';
+import Search from '../Search/Search';
 
 export default function App() {
   return (

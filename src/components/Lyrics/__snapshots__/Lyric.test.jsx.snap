@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Lyric component renders Lyric 1`] = `
-<Fragment>
+<section
+  className="lyric"
+>
   <h2>
-    Please Please Me
+    test
   </h2>
-  <p />
-</Fragment>
+  <p>
+    ...loading
+  </p>
+</section>
 `;

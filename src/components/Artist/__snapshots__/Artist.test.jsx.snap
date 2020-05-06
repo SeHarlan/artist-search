@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Artist component renders Artist 1`] = `
+<section
+  className="Artist"
+>
+  <h1>
+    test
+  </h1>
+  <nav>
+    <button
+      disabled={true}
+      onClick={[Function]}
+    >
+      Previous Page
+    </button>
+    <button
+      disabled={true}
+      onClick={[Function]}
+    >
+      Next Page
+    </button>
+  </nav>
+  <h2>
+    Sorry, No Releases Found
+  </h2>
+</section>
+`;

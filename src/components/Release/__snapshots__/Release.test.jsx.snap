@@ -1,17 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Release component renders Release 1`] = `
-<Fragment>
+<section
+  className="Release"
+>
   <h2>
     test
   </h2>
   <img
     alt="test"
     onError={[Function]}
-    src="http://coverartarchive.org/release/undefined/front"
+    src="http://coverartarchive.org/release/test/front"
   />
   <WithList(Song)
     list={Array []}
   />
-</Fragment>
+</section>
 `;

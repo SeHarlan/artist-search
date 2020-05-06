@@ -1,0 +1,16 @@
+.lyric {
+  h2 {
+    text-align: center;
+    text-decoration: underline;
+  }
+  p {
+    margin: 2rem 20vw;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.5rem;
+    white-space: pre-line;
+    max-height: 75vh;
+    overflow: scroll;
+  }
+}

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ArtistItem = ({ artist, artistId, score, disambiguation = 'N/A' }) => {
   return (
     <Link to={`/artists/${artist}/${artistId}`}>
-      <h1>{artist}</h1>
+      <h2>{artist}</h2>
       <p>Match Score: {score}</p>
       <p>Disambiguation: {disambiguation}</p>
     </Link>
